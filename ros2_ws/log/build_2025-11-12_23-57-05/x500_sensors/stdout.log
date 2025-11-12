@@ -1,0 +1,56 @@
+running egg_info
+creating ../../build/x500_sensors/x500_sensors.egg-info
+writing ../../build/x500_sensors/x500_sensors.egg-info/PKG-INFO
+writing dependency_links to ../../build/x500_sensors/x500_sensors.egg-info/dependency_links.txt
+writing entry points to ../../build/x500_sensors/x500_sensors.egg-info/entry_points.txt
+writing requirements to ../../build/x500_sensors/x500_sensors.egg-info/requires.txt
+writing top-level names to ../../build/x500_sensors/x500_sensors.egg-info/top_level.txt
+writing manifest file '../../build/x500_sensors/x500_sensors.egg-info/SOURCES.txt'
+reading manifest file '../../build/x500_sensors/x500_sensors.egg-info/SOURCES.txt'
+writing manifest file '../../build/x500_sensors/x500_sensors.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/abed/ros2_ws/build/x500_sensors/build
+creating /home/abed/ros2_ws/build/x500_sensors/build/lib
+creating /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+copying x500_sensors/zigzag_trajectory_node.py -> /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+copying x500_sensors/straight_trajectory_node.py -> /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+copying x500_sensors/__init__.py -> /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+copying x500_sensors/trajectory_node.py -> /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+copying x500_sensors/polygon_trajectory_node.py -> /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+copying x500_sensors/circular_trajectory_node.py -> /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors
+running install
+running install_lib
+creating /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+copying /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors/zigzag_trajectory_node.py -> /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+copying /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors/straight_trajectory_node.py -> /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+copying /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors/__init__.py -> /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+copying /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors/trajectory_node.py -> /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+copying /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors/polygon_trajectory_node.py -> /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+copying /home/abed/ros2_ws/build/x500_sensors/build/lib/x500_sensors/circular_trajectory_node.py -> /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors
+byte-compiling /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors/zigzag_trajectory_node.py to zigzag_trajectory_node.cpython-310.pyc
+byte-compiling /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors/straight_trajectory_node.py to straight_trajectory_node.cpython-310.pyc
+byte-compiling /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors/trajectory_node.py to trajectory_node.cpython-310.pyc
+byte-compiling /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors/polygon_trajectory_node.py to polygon_trajectory_node.cpython-310.pyc
+byte-compiling /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors/circular_trajectory_node.py to circular_trajectory_node.cpython-310.pyc
+running install_data
+creating /home/abed/ros2_ws/install/x500_sensors/share/ament_index
+creating /home/abed/ros2_ws/install/x500_sensors/share/ament_index/resource_index
+creating /home/abed/ros2_ws/install/x500_sensors/share/ament_index/resource_index/packages
+copying resource/x500_sensors -> /home/abed/ros2_ws/install/x500_sensors/share/ament_index/resource_index/packages
+copying package.xml -> /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors
+creating /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors/launch
+copying launch/x500_trajectory.launch.py -> /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors/launch
+copying launch/bridge.launch.py -> /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors/launch
+copying launch/x500_sensors_with_mavros.launch.py -> /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors/launch
+creating /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors/config
+copying config/px4_pluginlists.yaml -> /home/abed/ros2_ws/install/x500_sensors/share/x500_sensors/config
+running install_egg_info
+Copying ../../build/x500_sensors/x500_sensors.egg-info to /home/abed/ros2_ws/install/x500_sensors/lib/python3.10/site-packages/x500_sensors-0.0.1-py3.10.egg-info
+running install_scripts
+Installing circular_trajectory_node.py script to /home/abed/ros2_ws/install/x500_sensors/lib/x500_sensors
+Installing polygon_trajectory_node.py script to /home/abed/ros2_ws/install/x500_sensors/lib/x500_sensors
+Installing straight_trajectory_node.py script to /home/abed/ros2_ws/install/x500_sensors/lib/x500_sensors
+Installing zigzag_trajectory_node.py script to /home/abed/ros2_ws/install/x500_sensors/lib/x500_sensors
+writing list of installed files to '/home/abed/ros2_ws/build/x500_sensors/install.log'

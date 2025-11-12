@@ -1,0 +1,12 @@
+/rosbag2_recorder:
+  ros__parameters:
+    qos_overrides:
+      /mavros/camera/image_captured:
+        publisher:
+          reliability: best_effort
+          durability: transient_local
+      /mavros/cam_imu_sync/cam_imu_stamp:
+        publisher:
+          reliability: best_effort
+          durability: transient_local
+

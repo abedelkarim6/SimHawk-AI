@@ -1,0 +1,37 @@
+[1.571s] Invoking command in '/home/abed/ros2_ws/src/imu': PYTHONPATH=/home/abed/ros2_ws/src/build/imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/imu build --build-base /home/abed/ros2_ws/src/build/imu/build install --record /home/abed/ros2_ws/src/build/imu/install.log --single-version-externally-managed install_data
+[2.215s] running egg_info
+[2.216s] creating ../build/imu/imu.egg-info
+[2.217s] writing ../build/imu/imu.egg-info/PKG-INFO
+[2.217s] writing dependency_links to ../build/imu/imu.egg-info/dependency_links.txt
+[2.217s] writing entry points to ../build/imu/imu.egg-info/entry_points.txt
+[2.218s] writing requirements to ../build/imu/imu.egg-info/requires.txt
+[2.218s] writing top-level names to ../build/imu/imu.egg-info/top_level.txt
+[2.218s] writing manifest file '../build/imu/imu.egg-info/SOURCES.txt'
+[2.222s] reading manifest file '../build/imu/imu.egg-info/SOURCES.txt'
+[2.226s] writing manifest file '../build/imu/imu.egg-info/SOURCES.txt'
+[2.227s] running build
+[2.227s] running build_py
+[2.227s] creating /home/abed/ros2_ws/src/build/imu/build
+[2.227s] creating /home/abed/ros2_ws/src/build/imu/build/lib
+[2.228s] creating /home/abed/ros2_ws/src/build/imu/build/lib/imu
+[2.228s] copying imu/imu_listener.py -> /home/abed/ros2_ws/src/build/imu/build/lib/imu
+[2.228s] copying imu/__init__.py -> /home/abed/ros2_ws/src/build/imu/build/lib/imu
+[2.228s] running install
+[2.229s] running install_lib
+[2.232s] creating /home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages/imu
+[2.232s] copying /home/abed/ros2_ws/src/build/imu/build/lib/imu/imu_listener.py -> /home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages/imu
+[2.232s] copying /home/abed/ros2_ws/src/build/imu/build/lib/imu/__init__.py -> /home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages/imu
+[2.233s] byte-compiling /home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages/imu/imu_listener.py to imu_listener.cpython-310.pyc
+[2.234s] byte-compiling /home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages/imu/__init__.py to __init__.cpython-310.pyc
+[2.235s] running install_data
+[2.235s] creating /home/abed/ros2_ws/src/install/imu/share/ament_index
+[2.235s] creating /home/abed/ros2_ws/src/install/imu/share/ament_index/resource_index
+[2.235s] creating /home/abed/ros2_ws/src/install/imu/share/ament_index/resource_index/packages
+[2.235s] copying resource/imu -> /home/abed/ros2_ws/src/install/imu/share/ament_index/resource_index/packages
+[2.236s] copying package.xml -> /home/abed/ros2_ws/src/install/imu/share/imu
+[2.236s] running install_egg_info
+[2.240s] Copying ../build/imu/imu.egg-info to /home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages/imu-0.0.0-py3.10.egg-info
+[2.241s] running install_scripts
+[2.290s] Installing imu_listener script to /home/abed/ros2_ws/src/install/imu/lib/imu
+[2.291s] writing list of installed files to '/home/abed/ros2_ws/src/build/imu/install.log'
+[2.349s] Invoked command in '/home/abed/ros2_ws/src/imu' returned '0': PYTHONPATH=/home/abed/ros2_ws/src/build/imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abed/ros2_ws/src/install/imu/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/imu build --build-base /home/abed/ros2_ws/src/build/imu/build install --record /home/abed/ros2_ws/src/build/imu/install.log --single-version-externally-managed install_data
