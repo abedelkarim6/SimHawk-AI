@@ -1,9 +1,0 @@
-source;share/x500_sensors/hook/pythonpath.ps1
-source;share/x500_sensors/hook/pythonpath.dsv
-source;share/x500_sensors/hook/pythonpath.sh
-source;share/x500_sensors/hook/ament_prefix_path.ps1
-source;share/x500_sensors/hook/ament_prefix_path.dsv
-source;share/x500_sensors/hook/ament_prefix_path.sh
-source;../../build/x500_sensors/share/x500_sensors/hook/pythonpath_develop.ps1
-source;../../build/x500_sensors/share/x500_sensors/hook/pythonpath_develop.dsv
-source;../../build/x500_sensors/share/x500_sensors/hook/pythonpath_develop.sh

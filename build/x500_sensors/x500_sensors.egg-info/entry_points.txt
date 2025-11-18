@@ -1,6 +1,0 @@
-[console_scripts]
-circular_trajectory_node.py = x500_sensors.circular_trajectory_node:main
-polygon_trajectory_node.py = x500_sensors.polygon_trajectory_node:main
-straight_trajectory_node.py = x500_sensors.straight_trajectory_node:main
-zigzag_trajectory_node.py = x500_sensors.zigzag_trajectory_node:main
-
