@@ -1,0 +1,1 @@
+/home/abed/ros2_ws/src/x500_sensors/launch/x500_trajectory.launch.py

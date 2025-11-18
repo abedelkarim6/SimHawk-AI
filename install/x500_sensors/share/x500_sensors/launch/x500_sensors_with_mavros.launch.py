@@ -1,0 +1,1 @@
+/home/abed/ros2_ws/build/x500_sensors/launch/x500_sensors_with_mavros.launch.py

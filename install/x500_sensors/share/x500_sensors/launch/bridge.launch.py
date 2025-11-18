@@ -1,0 +1,1 @@
+/home/abed/ros2_ws/build/x500_sensors/launch/bridge.launch.py

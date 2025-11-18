@@ -1,0 +1,33 @@
+[0.019s] Invoking command in '/home/abed/ros2_ws/src/build/ros_gz_sim': AMENT_PREFIX_PATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces:/home/abed/ros2_ws/install/ros_gz_interfaces:/home/abed/ros2_ws/install/imu:/opt/ros/humble LD_LIBRARY_PATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/abed/ros2_ws/src/ros_gz/ros_gz_sim -DCMAKE_INSTALL_PREFIX=/home/abed/ros2_ws/src/install/ros_gz_sim
+[0.145s] -- The C compiler identification is GNU 11.4.0
+[0.276s] -- The CXX compiler identification is GNU 11.4.0
+[0.292s] -- Detecting C compiler ABI info
+[0.435s] -- Detecting C compiler ABI info - done
+[0.462s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.462s] -- Detecting C compile features
+[0.463s] -- Detecting C compile features - done
+[0.471s] -- Detecting CXX compiler ABI info
+[0.647s] -- Detecting CXX compiler ABI info - done
+[0.664s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.665s] -- Detecting CXX compile features
+[0.666s] -- Detecting CXX compile features - done
+[0.688s] [31mCMake Error at CMakeLists.txt:15 (find_package):
+[0.688s]   By not providing "FindCLI11.cmake" in CMAKE_MODULE_PATH this project has
+[0.688s]   asked CMake to find a package configuration file provided by "CLI11", but
+[0.688s]   CMake did not find one.
+[0.688s] 
+[0.689s]   Could not find a package configuration file provided by "CLI11" with any of
+[0.689s]   the following names:
+[0.689s] 
+[0.689s]     CLI11Config.cmake
+[0.689s]     cli11-config.cmake
+[0.689s] 
+[0.689s]   Add the installation prefix of "CLI11" to CMAKE_PREFIX_PATH or set
+[0.690s]   "CLI11_DIR" to a directory containing one of the above files.  If "CLI11"
+[0.690s]   provides a separate development package or SDK, be sure it has been
+[0.690s]   installed.
+[0.690s] 
+[0.690s] [0m
+[0.690s] -- Configuring incomplete, errors occurred!
+[0.690s] See also "/home/abed/ros2_ws/src/build/ros_gz_sim/CMakeFiles/CMakeOutput.log".
+[0.694s] Invoked command in '/home/abed/ros2_ws/src/build/ros_gz_sim' returned '1': AMENT_PREFIX_PATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces:/home/abed/ros2_ws/install/ros_gz_interfaces:/home/abed/ros2_ws/install/imu:/opt/ros/humble LD_LIBRARY_PATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/abed/ros2_ws/src/install/ros_gz_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/abed/ros2_ws/src/ros_gz/ros_gz_sim -DCMAKE_INSTALL_PREFIX=/home/abed/ros2_ws/src/install/ros_gz_sim

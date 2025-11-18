@@ -1,0 +1,61 @@
+# Training dataset (auto-increment: dataset_001)
+python3 ~/drone_project/data_collection/scripts/automated_data_collection.py \
+  --type train \
+  --circular 3 \
+  --zigzag 2 \
+  --duration 120
+
+# Next training dataset (auto-increment: dataset_002)
+python3 ~/drone_project/data_collection/scripts/automated_data_collection.py \
+  --type train \
+  --polygon 2 \
+  --straight 2 \
+  --duration 90
+
+# Test dataset (auto-increment: dataset_001 in test folder)
+python3 ~/drone_project/data_collection/scripts/automated_data_collection.py \
+  --type test \
+  --circular 1 \
+  --zigzag 1 \
+  --duration 60
+
+# Custom named test dataset
+python3 ~/drone_project/data_collection/scripts/automated_data_collection.py \
+  --type test \
+  --name test_custom_scenario \
+  --straight 3 \
+  --duration 90
+
+# With custom map bounds
+python3 ~/drone_project/data_collection/scripts/automated_data_collection.py \
+  --type train \
+  --circular 2 \
+  --map-x-min -50 \
+  --map-x-max 50 \
+  --map-y-min -50 \
+  --map-y-max 50
+```
+
+## Final Directory Structure
+```
+~/drone_project/
+└── data_collection/
+    ├── scripts/
+    │   ├── automated_data_collection.py
+    │   ├── imgs_collection.py
+    │   ├── sensor_collector.py
+    │   └── synchronize_data.py
+    └── datasets/
+        ├── train/
+        │   ├── dataset_001/
+        │   │   ├── circular_run01/
+        │   │   ├── zigzag_run01/
+        │   │   ├── master_dataset.csv
+        │   │   ├── dataset_statistics.json
+        │   │   └── README.md
+        │   ├── dataset_002/
+        │   └── dataset_003/
+        └── test/
+            ├── dataset_001/
+            ├── dataset_002/
+            └── test_custom_scenario/
