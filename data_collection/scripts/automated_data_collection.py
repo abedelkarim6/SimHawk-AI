@@ -16,10 +16,53 @@ from datetime import datetime
 import argparse
 
 
+def find_next_dataset_folder(base_dir, prefix="dataset"):
+    """
+    Find the next available dataset folder number
+    
+    Args:
+        base_dir: Base directory to search in
+        prefix: Prefix for dataset folders (default: "dataset")
+    
+    Returns:
+        Path to next dataset folder (e.g., dataset_1, dataset_2, etc.)
+    """
+    base_path = Path(base_dir).expanduser()
+    base_path.mkdir(parents=True, exist_ok=True)
+    
+    # Find all existing dataset folders
+    existing_folders = [d for d in base_path.iterdir() 
+                       if d.is_dir() and d.name.startswith(f"{prefix}_")]
+    
+    if not existing_folders:
+        # No existing folders, start with dataset_1
+        return base_path / f"{prefix}_1"
+    
+    # Extract numbers from folder names
+    numbers = []
+    for folder in existing_folders:
+        try:
+            # Extract number after the prefix and underscore
+            num_str = folder.name.split(f"{prefix}_")[1]
+            numbers.append(int(num_str))
+        except (IndexError, ValueError):
+            continue
+    
+    if not numbers:
+        return base_path / f"{prefix}_1"
+    
+    # Return the next number
+    next_num = max(numbers) + 1
+    return base_path / f"{prefix}_{next_num}"
+
+
 class DataCollectionPipeline:
     def __init__(self, base_dir="~/ros2_ws/data_collection", output_dir="datasets", verbose=False):
         self.base_dir = Path(base_dir).expanduser()
-        self.output_dir = self.base_dir / output_dir
+        
+        datasets_dir = self.base_dir / output_dir
+        self.output_dir = find_next_dataset_folder(datasets_dir, prefix="dataset")
+        
         self.verbose = verbose
         
         # Synchronization script path
@@ -228,13 +271,14 @@ class DataCollectionPipeline:
         
         # Build ROS2 launch command
         ros2_ws = os.path.expanduser("~/ros2_ws")
+        relative_output_dir = self.output_dir.relative_to(self.base_dir)
         
         launch_cmd = (
             f"source {ros2_ws}/install/setup.bash && "
             f"ros2 launch x500_sensors x500_trajectory.launch.py "
             f"trajectory_type:={trajectory_type} "
             f"run_number:={run_number:02d} "
-            f"output_dir:={self.output_dir.name} "
+            f"output_dir:={relative_output_dir} "
             f"trajectory_duration:={float(duration)} "
         )
         
@@ -763,7 +807,7 @@ Trajectory-specific parameters:
     parser.add_argument('--straight', type=int, default=2, help='Number of straight trajectory runs')
     
     # General parameters
-    parser.add_argument('--output', type=str, default='datasets', help='Output directory name')
+    parser.add_argument('--output', type=str, default="datasets")
     parser.add_argument('--base-dir', type=str, default='~/ros2_ws/data_collection', help='Base directory')
     parser.add_argument('--duration', type=int, default=120, help='Flight duration per run (seconds)')
     parser.add_argument('--takeoff-alt', type=float, default=25.0, help='Takeoff altitude (meters)')
@@ -837,6 +881,15 @@ Trajectory-specific parameters:
     total_runs = sum(config.values())
     estimated_time = total_runs * (args.duration + 35)  # flight + overhead per run
     
+    # Show what the output directory will be
+    base_dir = Path(args.base_dir).expanduser()
+    if args.output:
+        output_dir_name = args.output
+    else:
+        # Preview the auto-incremented folder name
+        next_folder = find_next_dataset_folder(base_dir, prefix="dataset")
+        output_dir_name = next_folder.name
+    
     print("\n" + "="*60)
     print("🚁 GPS PREDICTION DATA COLLECTION PIPELINE")
     print("="*60)
@@ -848,7 +901,7 @@ Trajectory-specific parameters:
                 print(f"    {key}: {value}")
     print(f"\nTotal runs: {total_runs}")
     print(f"Estimated time: {estimated_time//60} minutes")
-    print(f"Output directory: {args.output}")
+    print(f"Output directory: {output_dir_name}")
     print("\n" + "="*60)
     
     response = input("\nProceed with data collection? (yes/no): ")
@@ -859,7 +912,7 @@ Trajectory-specific parameters:
     # Create pipeline and run
     pipeline = DataCollectionPipeline(
         base_dir=args.base_dir,
-        output_dir=args.output,
+        output_dir=args.output, 
         verbose=args.verbose
     )
     
